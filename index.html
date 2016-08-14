@@ -1,0 +1,27 @@
+<html>
+<head>
+<script type="text/javascript">
+function redirect()
+{
+ var count = 10;
+ setInterval(function()
+ {
+  document.getElementById('countdown').innerHTML = "Redirect In "+count+" Seconds...";
+  if (count == 0) 
+  {
+   window.location = ''; 
+  }
+  count--;
+ },1000);
+}
+</script>
+</head>
+<body>
+<div id="wrapper">
+<div id="redirect_div">
+ <input type="button" value="Click To Redirect" onclick="redirect();">
+ <p id="countdown"></p>
+</div>
+</div>
+</body>
+</html>
